@@ -10,7 +10,10 @@ describe('Testes da função HandlerElephants', () => {
   it('Testa o resultado (count) retorna a quantidade de elefantes', () => {
     expect(handlerElephants('count')).toBe(4);
   });
-  it('Testa funcao para (averageAge) se retorna resultado experado', () => {
+  it('Testa funcao para (averageAge) se retorna resultado esperado', () => {
     expect(handlerElephants('averageAge')).toBeCloseTo(10.5);
+  });
+  it('Testa (availability) se retorna os resultados de dias da semana esperados', () => {
+    expect(handlerElephants('availability')).toEqual(['Friday', 'Saturday', 'Sunday', 'Tuesday']);
   });
 });

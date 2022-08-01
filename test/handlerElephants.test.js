@@ -10,4 +10,7 @@ describe('Testes da função HandlerElephants', () => {
   it('Testa o resultado count retorna a quantidade de elefantes', () => {
     expect(handlerElephants('count')).toBe(4);
   });
+  it('Testa funcao para avarageAge se retorna resultado experado', () => {
+    expect(handlerElephants('avarageAge')).toEqual(10.5);
+  });
 });

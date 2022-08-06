@@ -21,4 +21,7 @@ describe('Testes da função getOpeningHours', () => {
   it('Verifica ao receber Thu e 09:00-AM retorna o erro The day must be valid. Example: Monday', () => {
     expect(() => getOpeningHours('Thu', '09:00-AM')).toThrow('The day must be valid. Example: Monday');
   });
+  it('Verifica ao receber Friday e 09:00-ZM retorna o erro The abbreviation must be \'AM\' or \'PM\'', () => {
+    expect(() => getOpeningHours('Friday', '09:00-ZM')).toThrow('The abbreviation must be \'AM\' or \'PM\'');
+  });
 });
